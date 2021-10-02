@@ -8,4 +8,11 @@ of something bigger. */
 
 var myName;
 
+//==== 3
+
+// Setup
+var a;
+a = 7;
+// Only change code below this line
+
 //=====
