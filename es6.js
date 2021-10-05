@@ -140,3 +140,96 @@ const stats = {
 // Only change code below this line
 const half = ({max, min}) => (max + min) / 2.0;
 // Only change code above this line
+
+// ===== 17
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+    // Only change code below this line
+    const failureItems = [];
+    arr.forEach(item => {
+        failureItems.push(`<li class="text-warning">${item}</li>`)
+    })
+    // Only change code above this line
+    return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+
+// ===== 18
+const createPerson = (name, age, gender) => ({name, age, gender})
+
+// ===== 19
+// Only change code below this line
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        this.gear = newGear;
+    }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// ===== 20
+// Only change code below this line
+class Vegetable {
+    constructor(name){
+        this.name = name;
+    }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+// ===== 21
+// Only change code below this line
+class Thermostat {
+    constructor(fahrenheit) {
+        this.fahrenheit = fahrenheit;
+    }
+
+    get temperature() {
+        return (5 / 9) * (this.fahrenheit - 32);
+    }
+
+    set temperature(celsius) {
+        this.fahrenheit = (celsius * 9.0) / 5 + 32;
+    }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+// ===== 22
+// // Only change code below this line
+// <html>
+// <body>
+// <!-- Only change code below this line -->
+// <script type="module" src="index.js"></script>
+// <!-- Only change code above this line -->
+// </body>
+// </html>
+
+// ===== 23
+export const uppercaseString = (string) => {
+    return string.toUpperCase();
+}
+
+export const lowercaseString = (string) => {
+    return string.toLowerCase()
+}
+
+// ===== 24
+import { uppercaseString, lowercaseString } from './string_functions.js';
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
