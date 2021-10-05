@@ -233,3 +233,71 @@ import { uppercaseString, lowercaseString } from './string_functions.js';
 
 uppercaseString("hello");
 lowercaseString("WORLD!");
+
+// ===== 25
+import * as stringFunctions from "./string_functions.js";
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+// ===== 26
+export default function subtract(x, y) {
+    return x - y;
+}
+
+// ===== 27
+import subtract from "./math_functions.js";
+// Only change code above this line
+
+subtract(7,4);
+
+// ===== 28
+const makeServerRequest = new Promise((resolve, reject) => {
+
+});
+
+// ===== 29
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer represents a response from a server
+    let responseFromServer;
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received")
+    }
+});
+
+// ===== 30
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+makeServerRequest.then(result => console.log(result))
+
+// ===== 31
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to false to represent an unsuccessful response from a server
+    let responseFromServer = false;
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then(result => {
+    console.log(result);
+});
+
+makeServerRequest.catch(error => {
+    console.log(error);
+});
