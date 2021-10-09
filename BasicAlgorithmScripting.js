@@ -99,3 +99,38 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+//==== 8
+function findElement(arr, func) {
+    let num = 0;
+    num = arr.find(func)
+    return num;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+//==== 9
+function booWho(bool) {
+    return typeof bool === "boolean";
+}
+
+booWho(true);
+
+//==== 10
+function titleCase(str) {
+    let arrStr = str.toLowerCase().split(" ");
+    let result = arrStr.map(item => item[0].toUpperCase()+item.substring(1))
+    let resStr = result.join(' ')
+    return resStr;
+}
+
+titleCase("I'm a little tea pot");
+
+//==== 11
+function frankenSplice(arr1, arr2, n) {
+    let a = arr2.slice();
+    a.splice(n,0,...arr1);
+    return a;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
