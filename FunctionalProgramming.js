@@ -285,3 +285,51 @@ let ratings = watchList.map(item => ({title: item["Title"],  rating: item["imdbR
 // Only change code above this line
 
 console.log(JSON.stringify(ratings));
+
+// 8
+
+// The global variable
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+    var newArray = [];
+    // Only change code below this line
+    for(let i = 0; i < this.length; i++){
+        newArray.push(callback(this[i]))
+    }
+    // Only change code above this line
+    return newArray;
+};
+
+var new_s = s.myMap(function(item) {
+    return item * 2;
+});
+
+// 9
+
+// Only change code below this line
+
+var filteredList = watchList.map(item => ({title: item.Title, rating: item.imdbRating})).filter(item => parseFloat(item.rating) >= 8);
+
+// Only change code above this line
+
+// 10
+
+// The global variable
+var s = [23, 65, 98, 5];
+
+Array.prototype.myFilter = function(callback) {
+    // Only change code below this line
+    var newArray = [];
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    // Only change code above this line
+    return newArray;
+};
+
+var new_s = s.myFilter(function(item) {
+    return item % 2 === 1;
+});
