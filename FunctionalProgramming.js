@@ -333,3 +333,88 @@ Array.prototype.myFilter = function(callback) {
 var new_s = s.myFilter(function(item) {
     return item % 2 === 1;
 });
+
+// 11
+function sliceArray(anim, beginSlice, endSlice) {
+    // Only change code below this line
+    return anim.slice(beginSlice, endSlice)
+
+
+    // Only change code above this line
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+
+// 12
+
+function nonMutatingSplice(cities) {
+    // Only change code below this line
+    return cities.slice(0,3);
+    // Only change code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+// 13
+
+function nonMutatingConcat(original, attach) {
+    // Only change code below this line;
+    return original.concat(attach);
+    // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
+
+// 14
+
+function nonMutatingPush(original, newItem) {
+    // Only change code below this line
+    return original.concat(newItem);
+    // Only change code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingPush(first, second);
+
+
+// 15
+
+function getRating(watchList){
+    // Only change code below this line
+    let count = 0;
+    let raiting = watchList.reduce((obj,film) => {
+        if (film.Director == "Christopher Nolan") {
+            count+=1;
+            return obj + parseFloat(film.imdbRating);
+        }
+        return obj;
+    },0);
+    let averageRating = raiting / count;
+
+
+    // Only change code above this line
+    return averageRating;
+}
+
+// 16
+
+const squareList = arr => {
+    // Only change code below this line
+    return arr.filter(item => Number.isInteger(item) &&  item > 0).map(item => item * item);
+    // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+
+// 17
+
+function alphabeticalOrder(arr) {
+    // Only change code below this line
+    return arr.sort()
+    // Only change code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
