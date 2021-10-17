@@ -45,3 +45,44 @@ let result = quoteSample.match(vowelRegex); // Change this line
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
+
+// ==== 10;
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+
+// ==== 11;
+let quoteSample = "3 blind mice.";
+let myRegex = /[^aeiou^0-9]/ig; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+
+// ==== 12;
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; // Change this line
+let result = difficultSpelling.match(myRegex);
+
+// ==== 13;
+// Only change code below this line
+let chewieRegex = /Aa*/; // Change this line
+// Only change code above this line
+
+let result = chewieQuote.match(chewieRegex);
+
+
+// ==== 14;
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<h*?[0-9]*?>/g; // Change this line
+let result = text.match(myRegex);
+
+// ==== 15;
+let reCriminals = /C+/g; // Change this line
+
+// ==== 16;
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result = calRegex.test(rickyAndCal);
+
+// ==== 17;
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result = lastRegex.test(caboose);
